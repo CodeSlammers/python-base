@@ -1,6 +1,7 @@
 from flask import Flask
 from database import register_db
 from flask_bootstrap import Bootstrap
+from flask_debug import Debug
 from nav import nav
 from bundle import apply_assets
 
@@ -10,6 +11,7 @@ register_db(app)
 nav.init_app(app)
 Bootstrap(app)
 apply_assets(app)
+Debug(app)
 
 from api import api_app
 from frontend import frontend_app

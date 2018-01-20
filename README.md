@@ -71,5 +71,16 @@ For further info, search for "Flask Nav" extension
 * All database models are stored in `database/models` directory. 
 If you create a new model, don't forget to include it in `database/models/__init__.py`.
 
+## Endpoints
+The default endpoint is `http://localhost:5000`. 
+Here's the breakdown of everything that is accessible through web
+* On `/`, You'll get a "Hello, World!" response.
+* The HTTP API rests on `/api/`
+* On `/api/count` there's a counter in order to test database connection. 
+This value should increase every time you refresh the page.
+* On `/app`, the frontend UI rests.
+* On `/_debug` and `/reflect/`, you can see a simple debugging toolbar 
+where you can see the registered routes.
+
 ## License
 The MIT License
