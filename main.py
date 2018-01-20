@@ -1,9 +1,13 @@
 from flask import Flask
-from database import register_db, get_db
+from database import register_db
+from flask_bootstrap import Bootstrap
+from nav import nav
 
 app = Flask(__name__)
 app.config.from_object('config.DevConfig')
 register_db(app)
+nav.init_app(app)
+Bootstrap(app)
 
 from api import api_app
 from frontend import frontend_app
