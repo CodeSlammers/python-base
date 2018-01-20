@@ -1,15 +1,5 @@
-{#
-Most of this code has been copied from
-https://github.com/mbr/flask-bootstrap/tree/master/sample_app
-#}
-
-{# This simple template derives from ``base.html``. See ``base.html`` for
-   more information about template inheritance. #}
 {%- extends "base.html" %}
 
-{# Loads some of the macros included with Flask-Bootstrap. We are using the
-   utils module here to automatically render Flask's flashed messages in a
-   bootstrap friendly manner #}
 {% import "bootstrap/utils.html" as utils %}
 
 
@@ -29,13 +19,14 @@ https://github.com/mbr/flask-bootstrap/tree/master/sample_app
   {%- endif %}
   {%- endwith %}
     <div class="jumbotron">
-      <h1>Welcome to Flask-Bootstrap</h1>
-      <p>This example application demonstrates some (but not all!) of the
-      features of <a href="http://pythonhosted.org/Flask-Bootstrap">
-      Flask-Bootstrap</a>.</p>
+      <h1>Welcome to Code Slammers</h1>
+      <p>
+          This is a sample Twitter Bootstrap application. This project is running on a Flask backend
+          along with a MySQL database.
+      </p>
       <p>
         <a class="btn btn-lg btn-default" role="button"
-           href="http://pythonhosted.org/Flask-Bootstrap" >Show docs</a>
+           href="http://pythonhosted.org/Flask-Bootstrap" >Show docs for how to use Flask Bootstrap</a>
       </p>
     </div>
    </div>

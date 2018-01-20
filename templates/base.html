@@ -1,3 +1,8 @@
+{#
+Most of this code has been copied from
+https://github.com/mbr/flask-bootstrap/tree/master/sample_app
+#}
+
 {# ``base.html`` is the template all our other templates derive from. While
    Flask-Bootstrap ships with its own base, it is good form to create a custom
    one for our app, as it allows customizing some aspects.
@@ -34,9 +39,18 @@
 {% block styles -%}
     {{super()}}  {# do not forget to call super or Bootstrap's own stylesheets
                     will disappear! #}
-    <link rel="stylesheet" type="text/css"
-          href="{{url_for('static', filename='sample-app.css')}}">
+    {% assets "css_all" %}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}" />
+    {% endassets %}
 {% endblock %}
+{% block scripts %}
+    {{ super() }}
+    {% assets "js_all" %}
+    <script src="{{ ASSET_URL }}" ></script>
+    {% endassets %}
+{% endblock %}
+
+<script type="text/javascript" src="{{ ASSET_URL }}"></script>
 
 {# Finally, round things out with navigation #}
 {% block navbar %}
