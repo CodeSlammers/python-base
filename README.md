@@ -52,6 +52,24 @@ first in the wiki, then all over the internet regarding why your project is not 
 * Flask WTForms for HTML form submissions
 * Flask SQLAlchemy (supports MySQL)
 * Flask Bootstrap (Twitter Bootstrap, jQuery)
+* Flask Web assets
+* Flask Navigation
+
+## Directory Structure
+* All JavaScript and CSS files will go inside their corresponding directories in `static/`
+* These files need to be registered before they are run on the browser. 
+To do so, register the files in `bundle/bundle.py`
+* Flask configuration are stored in `config/config.py`. 
+Development specific configurations are stored in `config/dev_config.py`.
+* The project is divided into two parts: HTTP API, whose blueprint lies in the `api/` directory,
+and the frontend layouts, whose blueprints are stored in the `frontend/` directory.
+* If you want to add a new page, you need to create a route mapping in `frontend/`, blueprint
+* If you want this page to appear on the navigation bar, register it on `nav/nav.py`. 
+For further info, search for "Flask Nav" extension
+* All HTML documents will go in `templates/` directory. These documents are templated using Jinja2.
+* See `templates/sample_page.html` on how to create a sample HTML page.
+* All database models are stored in `database/models` directory. 
+If you create a new model, don't forget to include it in `database/models/__init__.py`.
 
 ## License
 The MIT License

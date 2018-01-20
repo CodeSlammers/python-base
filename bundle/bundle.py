@@ -7,7 +7,6 @@ def apply_assets(app: Flask):
 
     js = Bundle(
         'js/html5shiv.min.js',
-        'js/respond.min.js',
         'js/respond.min.js'
     )
     css = Bundle(
