@@ -2,12 +2,14 @@ from flask import Flask
 from database import register_db
 from flask_bootstrap import Bootstrap
 from flask_debug import Debug
+from flask_session import Session
 from nav import nav
 from bundle import apply_assets
 
 app = Flask(__name__)
 app.config.from_object('config.DevConfig')
-register_db(app)
+session = Session(app)
+register_db(app, app.session_interface.db)  # mix session interface db session with the project db session
 nav.init_app(app)
 Bootstrap(app)
 apply_assets(app)

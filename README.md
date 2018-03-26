@@ -52,8 +52,10 @@ first in the wiki, then all over the internet regarding why your project is not 
 * Flask WTForms for HTML form submissions
 * Flask SQLAlchemy (supports MySQL)
 * Flask Bootstrap (Twitter Bootstrap, jQuery)
+* Flask Session
 * Flask Web assets
 * Flask Navigation
+* Flask Debug
 
 ## Directory Structure
 * All JavaScript and CSS files will go inside their corresponding directories in `static/`

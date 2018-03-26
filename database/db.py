@@ -4,9 +4,10 @@ from flask_sqlalchemy import SQLAlchemy
 db = None
 
 
-def register_db(app: Flask):
+def register_db(app: Flask, this_db=None):
     global db
-    db = SQLAlchemy(app)
+
+    db = SQLAlchemy(app) if this_db is None else this_db
 
     from . import models
 

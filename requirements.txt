@@ -5,6 +5,7 @@ Flask-Assets==0.12
 Flask-Bootstrap==3.3.7.1
 Flask-Debug==0.4.3
 flask-nav==0.6
+Flask-Session==0.3.1
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
 inflection==0.3.1
